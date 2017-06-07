@@ -49,12 +49,12 @@ class Parser
     find_tag_property('id="firstHeading"', '>', '<')
   end
 
-  def extract_summary
-    a = find_tag_property('class="mw-parser-output"', '<p>', '<div id="toc"')
+  def extract_summary # only took 200 characters of the section above TOC
+    a = find_tag_property('id="mw-content-text"', '<p>', '<div id="toc"')[0..1000]
   end
 
   def extract_image_url
-    find_tag_property('<img', 'src="', '"')[2..-1]
+    'https:' + find_tag_property('<img', 'src="', '"')
   end
 
   def find_tag_property(identifier, hook, tail)

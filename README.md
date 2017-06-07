@@ -12,6 +12,7 @@ Future todos:
 * clean up summary text and put in clean format
 * implement spec for the services
 * bulk db import for simultaneous creation
+* to save time only did one root component, could use more modularization
 
 # Rails Interview Project
 
