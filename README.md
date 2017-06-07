@@ -1,5 +1,17 @@
 Database:
 
+Purposely did not use Nokogiri library for manual scrapping and parsing.
+
+Done:
+* a spider to fetch web pages
+* a parser to parse out necessary data
+* database with indexes on date
+
+Future todos:
+* refactor / combine method in parser
+* clean up summary text and put in clean format
+* implement spec for the services
+* bulk db import for simultaneous creation
 
 # Rails Interview Project
 
