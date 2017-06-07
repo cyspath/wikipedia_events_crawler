@@ -7,12 +7,13 @@ class Parser
     @date = date
   end
 
-  def parse_hrefs
+  def href_list
     extract_links
   end
 
-  def parse_article
+  def event_data
     {
+      date: @date,
       title: extract_title,
       summary: extract_summary,
       image_url: extract_image_url

@@ -8,21 +8,21 @@ class Spider
   end
 
 
-  def run
+  def crawl
     events_page = fetch_page(date_to_href)
 
     # obtain list of hrefs of events for give date
-    hrefs = Parser.new(events_page, @date).parse_hrefs
+    hrefs = Parser.new(events_page, @date).href_list
 
     # for each href, go to the event page and obtain article summary
-    summaries = []
-    hrefs.take(1).each do |href|
+    events_data = []
+    hrefs.each do |href|
       event_page = fetch_page(href)
       # return event_page
-      data = Parser.new(event_page, @date).parse_article
-      summaries.push(data)
+      data = Parser.new(event_page, @date).event_data
+      events_data.push(data)
     end
-    summaries
+    events_data
   end
 
   private
