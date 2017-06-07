@@ -31,14 +31,6 @@ class Spider
     '/wiki/Portal:Current_events/' + @date.strftime('%B_%Y') + "#" + @date.strftime('%Y_%B_%-d')
   end
 
-  def parse_events(page)
-
-  end
-
-  def parse_event(page)
-
-  end
-
   def fetch_page(href)
     uri = URI.parse(HOST_URL + href)
     http = Net::HTTP.new(uri.host, uri.port)
