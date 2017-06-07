@@ -6,13 +6,15 @@ Done:
 * a spider to fetch web pages
 * a parser to parse out necessary data
 * database with indexes on date
+* very basic and minimal bootstrap styling
+* frontend with react components
 
 Future todos:
 * refactor / combine method in parser
 * clean up summary text and put in clean format
 * implement spec for the services
 * bulk db import for simultaneous creation
-* to save time only did one root component, could use more modularization
+* to save time only did one root component, could use more modularization, react router, etc
 
 # Rails Interview Project
 

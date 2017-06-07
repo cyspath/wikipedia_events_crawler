@@ -13,15 +13,17 @@ var EventPage = React.createClass({
     } else {
       var events = this.props.events.map(function (e) {
         return (
-          <div key={e.id}>
+          <div key={e.id} className="col-sm-4">
             <h4>{e.title}</h4>
             <div><img src={e.image_url}/></div>
-            <div>{e.summary}</div>
+            <p>{e.summary}</p>
           </div>
         )
       });
       return (
-        <div>{events}</div>
+        <div className="container">
+          <div className="row">{events}</div>{events}
+        </div>
       )
     }
   },
@@ -31,8 +33,8 @@ var EventPage = React.createClass({
 
     return (
       <center>
-        <h2>Event Summary Page</h2>
-        <div onClick={this.handleClick}>BACK TO INDEX</div>
+        <h1 className="display-3">Event Summary Page</h1>
+        <div onClick={this.handleClick} className="btn btn-primary">{"< BACK TO INDEX"}</div>
         {content}
       </center>
     )
